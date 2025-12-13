@@ -33,7 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
     final themeProvider = Provider.of<ThemeProvider>(context);
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Top Ethiopian Leaders'),
+        title: const Text('6 የቅርብ የኢትዬጲያ መሪዎች'),
         actions: [
           IconButton(
             icon: Icon(themeProvider.isDarkMode ? Icons.light_mode : Icons.dark_mode),
@@ -64,7 +64,7 @@ class _HomeScreenState extends State<HomeScreen> {
               },
             ),
             ListTile(
-              title: const Text('About Developer'),
+              title: const Text('ስለዴቨሎፐሩ'),
               onTap: () {
                 Navigator.pop(context);
                 Navigator.push(
@@ -83,7 +83,7 @@ class _HomeScreenState extends State<HomeScreen> {
             child: TextField(
               controller: _searchController,
               decoration: const InputDecoration(
-                labelText: 'Search by name',
+                labelText: 'በስም ለመፈልግ',
                 border: OutlineInputBorder(),
               ),
               onChanged: _filterLeaders,

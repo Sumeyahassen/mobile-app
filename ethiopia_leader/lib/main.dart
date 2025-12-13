@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
             builder: (context, themeProvider, child) {
               return MaterialApp(
                 debugShowCheckedModeBanner: false,
-                title: 'Ethiopian Leaders',
+                title: 'የኢትዮጲያ መሪዎች',
                 theme: ThemeData.light().copyWith(
                   primaryColor: Colors.green,
                   scaffoldBackgroundColor: Colors.white,
