@@ -7,32 +7,31 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-  <div>
-  <div className='flex justify-between px-3 py-3 h-12 bg-red-300'>
+  <div className="dark">
+  <div className='flex justify-between px-3 py-3 h-12 bg-red-300 dark:bg-gray-800 dark:text-white'>
     {/* logo */}
 <div className="">logo</div>
 {/* navigation */}
 {/* how to response the navgation bare */}
 {/* desktop */}
-<div className="hidden sm:flex-col  md:flex gap-2">
+<div className="hidden sm:flex gap-2">
   <samp className=''>home</samp>
   <samp className=''>about</samp>
   <samp className=''>servise</samp>
   <samp className=''>contact</samp>
 </div>
-<div className="md:hidden">X</div>
-{/* <div className="flex flex-row gap-2">
+
+<div className="sm:hidden">X</div>
+{/* mobile view */}
+<div className="block sm:hidden">
   <samp className=''>home</samp>
   <samp className=''>about</samp>
   <samp className=''>servise</samp>
   <samp className=''>contact</samp>
-</div> */}
-
-
-{/* gride in tailwind css */}
-
+</div>
  </div>
- <div className="grid grid-cols-4 gap-5 px-10 py-10">
+ {/* gride in tailwind css */}
+ <div className="grid grid-cols-4 gap-5 px-10 py-10 dark:bg-gray-500">
   <div className="h-12 w-20 bg-yellow-500 hover:scale-105 transition-all duration-700"></div>
   <div className="h-12 w-10 bg-green-500 hover:bg-green-900"></div>
   <div className="h-12 w-10 bg-blue-500"></div>
