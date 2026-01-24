@@ -9,8 +9,9 @@ function Header() {
     <div className='flex justify-between items-center bg-amber-600 h-16 px-5'>
       {/* logo */}
       <div className="">React Class</div>
-      <div className="sm:hidden cursor-pointer" onClick={open}>{isMenu?"X":"Menu"}</div>
+      <div className="sm:hidden cursor-pointer" onClick={open}>{isMenu?"X":"☰"}</div>
       {/* navbar */}
+      {/* desktop menu */}
       <nav className='hidden sm:flex justify-between gap-4'>
         <a href="">Home</a>
         <a href="">About</a>
