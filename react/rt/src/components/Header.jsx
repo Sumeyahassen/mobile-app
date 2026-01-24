@@ -14,6 +14,13 @@ function Header() {
         <a href="">Projects</a>
         <a href="">Contact</a>
       </nav>
+      <nav className='flex flex-col justify-between gap-4 min-h-min sm:hidden absolute top-16 left-1/2 pt-4 bg-amber-400 '>
+        <a href="">Home</a>
+        <a href="">About</a>
+        <a href="">Servise</a>
+        <a href="">Projects</a>
+        <a href="">Contact</a>
+      </nav>
     </div>
   )
 }
