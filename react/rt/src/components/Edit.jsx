@@ -1,6 +1,7 @@
 import React from "react";
 import Input from "./Input";
 function Edit({ tasks ,setTask}) {
+
   const deleteTask = (index) => {
     const newTasks = tasks.filter((__, i) => i !== index);
     setTask(newTasks);
@@ -9,9 +10,10 @@ function Edit({ tasks ,setTask}) {
 
   };
   return (
-    <div className="flex flex-col ">
+    <div className="flex flex-col  items-center py-10 ">
       {tasks.map((task, index) => (
-        <div className="flex justify-center items-center gap-4 text-white py-5 font-bold" key={index}>
+        <div className="flex justify-center items-center gap-4 text-white py-5 font-bold rounded-bl-lg rounded-tr-lg bg-amber-300 h-auto w-1/2 scroll-auto"
+        key={index}>
           <div className="text-black" key={index}>
             {task}
           </div>

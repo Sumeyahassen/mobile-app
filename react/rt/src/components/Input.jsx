@@ -10,16 +10,20 @@ function Input() {
       setTask([...Task, newTask]);
       setNewTask("");
     }
+    else{
+      alert("Please enter a task before adding.");
+    }
   };
   return (
-    <div className="">
+    <div className=" pt-10">
+      <h1>To Do List </h1>
       <div className=" flex justify-center items-center pt-10 gap-3">
         <input
           type="text"
           value={newTask}
           onChange={(e) => setNewTask(e.target.value)}
           placeholder="Add To Day Task"
-          className="border-2 py-3 rounded-sm border-amber-700  w-1/3 placeholder:text-center"
+          className="border-2 py-3 rounded-sm border-white  w-1/3 placeholder:text-center text-left px-3"
         />
         <button
           className="bg-green-500 text-white px-16 py-3 rounded-lg rounded-br-sm"

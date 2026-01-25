@@ -6,7 +6,7 @@ function Header() {
         setMenu(!isMenu);
     }
   return (
-    <div className='flex justify-between items-center bg-amber-600 h-16 px-5'>
+    <div className='flex justify-between items-center bg-amber-600 h-16 px-5 absolute top-0 bottom-0 left-0 right-0 w-full '>
       {/* logo */}
       <div className="">React Class</div>
       <div className="sm:hidden cursor-pointer" onClick={open}>{isMenu?"X":"☰"}</div>
