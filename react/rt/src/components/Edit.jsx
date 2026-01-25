@@ -1,6 +1,7 @@
 import React from "react";
 import Input from "./Input";
-function Edit({ tasks ,setTask}) {
+function Edit({ tasks ,setTask}) //to tacke the  use state hook as propes
+{
 
   const deleteTask = (index) => {
     const newTasks = tasks.filter((__, i) => i !== index);
