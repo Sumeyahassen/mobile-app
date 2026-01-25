@@ -18,9 +18,9 @@ function Edit({ tasks ,setTask}) {
 
   };
   return (
-    <div className="flex flex-col  items-center py-10 ">
+    <div className="flex flex-col justify-center  items-center py-10 ">
       {tasks.map((task, index) => (
-        <div className="flex justify-center items-center gap-4 text-white py-5 font-bold rounded-bl-lg rounded-tr-lg bg-amber-300 h-auto w-auto scroll-auto"
+        <div className="flex justify-center items-center gap-4 text-white py-5 font-bold rounded-bl-lg rounded-tr-lg px-10 bg-amber-300 h-auto w-auto scroll-auto"
         key={index}>
           <div className="text-black" key={index}>
             {task}
