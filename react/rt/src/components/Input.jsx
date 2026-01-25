@@ -21,7 +21,7 @@ function Input() {
         <input
           type="text"
           value={newTask}
-          onChange={(e) => setNewTask(e.target.value)}
+          onChange={(e) => setNewTask(e.target.value)}//event to handle  it change
           placeholder="Add To Day Task"
           className="border-2 py-3 rounded-sm border-white  w-1/3 placeholder:text-center text-left px-3"
         />
