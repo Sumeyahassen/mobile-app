@@ -1,6 +1,6 @@
 import React from "react";
 import Input from "./Input";
-function Edit({ tasks }) {
+function Edit({ tasks ,setTask}) {
   const deleteTask = (index) => {
     const newTasks = tasks.filter((__, i) => i !== index);
     setTask(newTasks);

@@ -28,7 +28,7 @@ function Input() {
           Add Task
         </button>
       </div>
-      <Edit tasks={Task} />
+      <Edit tasks={Task} setTask={setTask} />
     </div>
   );
 }
