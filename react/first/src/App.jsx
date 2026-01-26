@@ -30,7 +30,7 @@ const App = () => {
       {/* <Title/>
       <Title/>
       <Description/> */}
-      <Message/>
+      <Message text="the first propes" number={12} boole={false}/>
     </div>
   )
 }
