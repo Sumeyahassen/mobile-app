@@ -17,9 +17,10 @@ return(
 )
 }
 const Message=(props)=>{
-  console.log(props)
-  return <div className="">
-
+  console.log(props);
+  const {text,number,boole}=props;
+  return <div className={`${text} `}>
+welcame to message compnent
   </div>
 }
 const App = () => {
@@ -30,7 +31,7 @@ const App = () => {
       {/* <Title/>
       <Title/>
       <Description/> */}
-      <Message text="the first propes" number={12} boole={false}/>
+      <Message text="bg-red-600" number={12} boole={false}/>
     </div>
   )
 }
