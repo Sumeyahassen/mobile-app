@@ -1,5 +1,6 @@
 import React from 'react'
-const Title=()=>{
+const Title=(props)=>{
+  // props is in component is the agriment of this function
   console.log("title component renderd")
   return(
     <div className="">
@@ -15,14 +16,21 @@ return(
   </div>
 )
 }
+const Message=(props)=>{
+  console.log(props)
+  return <div className="">
+
+  </div>
+}
 const App = () => {
   // the main component are parent
   return (
-    <div className='bg-red-500'>
+    <div className=''>
       {/* render component arae  chiled  */}
+      {/* <Title/>
       <Title/>
-      <Title/>
-      <Description/>
+      <Description/> */}
+      <Message/>
     </div>
   )
 }
