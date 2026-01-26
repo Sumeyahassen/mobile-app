@@ -16,8 +16,10 @@ return(
 )
 }
 const App = () => {
+  // the main component are parent
   return (
     <div className='bg-red-500'>
+      {/* render component arae  chiled  */}
       <Title/>
       <Title/>
       <Description/>
