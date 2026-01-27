@@ -7,6 +7,7 @@ function App() {
     <Student name="Hikma" age={26} isStudent={false}/>
     <Student name="Iman" age={22} isStudent={true}/>
     <Student name="Biniyam" age={23} isStudent={true}/>
+    <Student/>
 
     </div>
   )
