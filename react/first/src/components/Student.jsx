@@ -10,6 +10,9 @@ function Student(props) {
 <p className="">
   Age:{props.age}
 </p>
+<p className="">
+  is Student: {props.isStudent? "yap":"nah"}
+</p>
     </div>
   )
 }
