@@ -7,6 +7,9 @@ function Student(props) {
 <p className="">
   Name:{props.name}
 </p>
+<p className="">
+  Age:{props.age}
+</p>
     </div>
   )
 }

@@ -3,7 +3,7 @@ import Student  from './components/Student'
 function App() {
   return (
     <>
-    <Student name="Sumeya"/>
+    <Student name="Sumeya" age={23}/>
 
     </>
   )
