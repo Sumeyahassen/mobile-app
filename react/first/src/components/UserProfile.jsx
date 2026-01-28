@@ -8,23 +8,23 @@ function UserProfile(props) {
 // - skills (array)
 // - contactInfo (object with email, phone, etc.)
   return (
-    <div>
+<div>
 <div className="">Name:{props.name}</div>
-<div className="">Avatar:{props.avator}</div>
+<div className="">Avatar:{props.avatar}</div>
 <div className="">Bio: {props.bio}</div>
 <div className="">Location:{props.location}</div>
-<div className="">Skills:{props.skills.map((skil)=>{
+<div className="">Skills:{props.skills.map((skil,index)=>{
     return(
-        <span key={index}>{skil}</span>
+        <span key={index}>{skil},</span>
     )
 })}</div>
-<div className="">Contact Information:{props.contacts.map((contact)=>{
-    return(
-        <div className="" key={index}>{contact}</div>
-    )
-})}</div>
+<div className="">
+    email:{props.contacts.email}
+    phone:{props.contacts.phone}
+</div>
 
-    </div>
+
+</div>
   )
 }
 
