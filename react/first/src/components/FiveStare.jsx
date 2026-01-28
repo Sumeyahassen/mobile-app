@@ -12,7 +12,7 @@ function FiveStare() {
             key={index}
             onClick={() => setRating(currentRat)}
           >
-            <FaStar size={30} className="border-amber-200 border-2 border-solid" />
+            {currentRat<=rating ? <FaStar size={30} className="border-amber-200 border-2 border-solid  bg-yellow-500 " />:<FaStar size={30} className="border-amber-200 border-2 border-solid bg-gray-100" />}
           </button>
         );
       })}
