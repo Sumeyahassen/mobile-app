@@ -2,6 +2,7 @@ import React from 'react'
 import Student  from './components/Student'
 import Profile from './components/Profile'
 import UserProfile from './components/UserProfile'
+import FiveStare from './components/FiveStare'
 function App() {
   return (
     // flex gap-4 justify-center items-center pt-10
@@ -23,6 +24,7 @@ function App() {
                   phone:"0912380076"
                 }}
                  />
+                 <FiveStare/>
 
     </div>
   )
