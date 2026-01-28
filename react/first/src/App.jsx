@@ -4,6 +4,7 @@ import Profile from "./components/Profile";
 import UserProfile from "./components/UserProfile";
 import FiveStare from "./components/FiveStare";
 import Product from "./components/Product";
+import Counter from "./components/Counter";
 
 function App() {
   const prodact={
@@ -36,7 +37,7 @@ function App() {
                 }}
                  />
                  <FiveStare/> */}
-
+{/*
 <Product
 image={prodact.image}
 title={prodact.title}
@@ -45,7 +46,8 @@ price={prodact.price}
 rating={prodact.rating}
 isOnSale={prodact.isOnSale?"yes":"no"}
 descountPercentage={prodact.descountPercentage}
-/>
+/> */}
+<Counter/>
     </div>
   );
 }
