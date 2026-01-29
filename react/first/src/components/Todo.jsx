@@ -61,7 +61,7 @@ function Todo() {
         <button>
           <IoIosAddCircle
             onClick={addTask}
-            className="text-green-800 "
+            className={edit!==null?"text-yellow-800":"text-green-800 "}
             size={50}
           />
         </button>
