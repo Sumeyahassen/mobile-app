@@ -22,6 +22,8 @@ function Todo() {
   };
 
   const deleteTask = (index) => {
+    const updateTask=tasks.filter((_,deletTask)=>deletTask!==index)
+    setTasks(updateTask)
 
   };
 
