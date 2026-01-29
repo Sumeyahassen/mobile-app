@@ -23,12 +23,15 @@ function Todo() {
       alert("No task  pls add task")
       return;
     }
+    // editing handeler
     if (edit !== null) {
       const updatTasks = [...tasks];
       updatTasks[edit] = newTask;
       setTasks(updatTasks);
       setEdit(null);
-    } else {
+    }
+    // new ask handeler
+    else {
       setTasks([...tasks, newTask]);
     }
     setNewTask("");
