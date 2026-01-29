@@ -12,19 +12,26 @@ import { IoIosAddCircle } from "react-icons/io";
 function Todo() {
   const [tasks, setTasks] = useState(["learn react"]);
   const [newTask, setNewTask] = useState("");
-  const [edit, setEdit] = useState("");
+  const [edit, setEdit] = useState(null);
   const [completeTask, setComplated] = useState([]);
   const [chacked, setChaked] = useState([]);
   const [unchacked, setUnchacked] = useState([]);
 
   // control add tasks
   const addTask = () => {
-    if (newTask.trim() !== "") {
-      setTasks([...tasks, newTask]);
-      setNewTask("");
-    } else {
-      alert("enter task");
+    if (newTask.trim() === "") {
+      alert("No task  pls add task")
+      return;
     }
+    if (edit !== null) {
+      const updatTasks = [...tasks];
+      updatTasks[edit] = newTask;
+      setTasks(updatTasks);
+      setEdit(null);
+    } else {
+      setTasks([...tasks, newTask]);
+    }
+    setNewTask("");
   };
   // delete task comteroler
   const deleteTask = (index) => {
