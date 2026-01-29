@@ -5,10 +5,17 @@
 // Show total/completed count
 // Filter (all/active/completed)
 import React, { useState } from "react";
-
+import { FaXmark } from "react-icons/fa6";
+import { TiTick } from "react-icons/ti";
+import { FaEdit } from "react-icons/fa";
+import { IoIosAddCircle } from "react-icons/io";
 function Todo() {
   const [tasks, setTasks] = useState(["learn react"]);
   const [newTask, setNewTask] = useState("");
+  const [completeTask,setComplated]=useState([])
+  const [chacked,setChaked]=useState([])
+  const [unchacked,setUnchacked]=useState([])
+
 
   // control add tasks
   const addTask = () => {
@@ -20,12 +27,16 @@ function Todo() {
       alert("enter task")
     }
   };
-
+// delete task comteroler
   const deleteTask = (index) => {
     const updateTask=tasks.filter((_,deletTask)=>deletTask!==index)
     setTasks(updateTask)
 
   };
+  // complated task controler
+  const complateed=()=>{
+
+  }
 
   return (
     <div>
@@ -38,20 +49,33 @@ function Todo() {
         />
         {/* Add new todo items */}
         <button
-          onClick={addTask}
-          className="bg-green-800 text-white px-6 py-3 rounded-lg border-black"
-        >
-          Add Task
+          >
+         <IoIosAddCircle
+         onClick={addTask}
+         className="text-green-800 "
+        size={50}
+         />
         </button>
       </div>
-      <div className="">
+      <div className="flex flex-col justify-center items-center">
         {/*  */}
         {tasks.map((task, index) => (
           <div key={index} className="flex items-center gap-3">
             <p className="">{task}</p>
-            <button onClick={() => deleteTask(index)} className="text-red-600">
-              Delete
-            </button>
+
+              <FaXmark
+              onClick={() => deleteTask(index)} className="text-red-600 cursor-pointer"
+              size={50}/>
+
+
+              <TiTick
+              className="text-green-500 cursor-pointer "
+              size={60}/>
+              <FaEdit
+              className="text-yellow-500 cursor-pointer"
+              size={45}
+              />
+
           </div>
         ))}
         {/* Mark as complete/incomplete*/}
