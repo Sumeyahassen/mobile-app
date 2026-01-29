@@ -5,6 +5,7 @@ import UserProfile from "./components/UserProfile";
 import FiveStare from "./components/FiveStare";
 import Product from "./components/Product";
 import Counter from "./components/Counter";
+import Todo from "./components/Todo";
 
 function App() {
   const prodact={
@@ -47,7 +48,8 @@ rating={prodact.rating}
 isOnSale={prodact.isOnSale?"yes":"no"}
 descountPercentage={prodact.descountPercentage}
 /> */}
-<Counter/>
+{/* <Counter/> */}
+<Todo/>
     </div>
   );
 }
