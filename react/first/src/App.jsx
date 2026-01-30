@@ -6,6 +6,7 @@ import FiveStare from "./components/FiveStare";
 import Product from "./components/Product";
 import Counter from "./components/Counter";
 import Todo from "./components/Todo";
+import Navbar from "./components/Navbar";
 
 function App() {
   const prodact={
@@ -49,7 +50,8 @@ isOnSale={prodact.isOnSale?"yes":"no"}
 descountPercentage={prodact.descountPercentage}
 /> */}
 {/* <Counter/> */}
-<Todo/>
+{/* <Todo/> */}
+<Navbar/>
     </div>
   );
 }

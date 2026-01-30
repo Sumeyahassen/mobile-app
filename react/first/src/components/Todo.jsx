@@ -10,7 +10,7 @@ import { TiTick } from "react-icons/ti";
 import { FaEdit } from "react-icons/fa";
 import { IoIosAddCircle } from "react-icons/io";
 function Todo() {
-  const [tasks, setTasks] = useState(["learn react"]);
+  const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState("");
   const [edit, setEdit] = useState(null);
   const [completeTask, setComplated] = useState([]);
@@ -48,14 +48,17 @@ function Todo() {
     document.getElementById("input").focus();
   };
   // complated task controler
-  const complateed = () => {};
+  const complateed = (index) => {
+    
+  };
 
   return (
-    <div>
-      <div className="flex gap-3 justify-center items-center py-10">
+    <div className="flex flex-col justify-center items-center gap-5 py-10">
+      <div className="flex gap-3 ">
         <input
+          placeholder="Enter today task"
           id="input"
-          className="bg-gray-200 px-6 py-3 w-2xl rounded-lg"
+          className="bg-gray-200 px-6 py-3 w-2xl rounded-lg placeholder:text-center placeholder:text-gray-500"
           type="text"
           value={newTask}
           onChange={(e) => setNewTask(e.target.value)}
@@ -69,7 +72,7 @@ function Todo() {
           />
         </button>
       </div>
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center bg-amber-100 w-3xl h-auto rounded-tl-2xl rounded-br-2xl text-center">
         {/*  */}
         {tasks.map((task, index) => (
           <div key={index} className="flex items-center gap-3">
