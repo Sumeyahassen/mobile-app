@@ -10,6 +10,7 @@ const handelaerSize=()=>{
 }
 useEffect(()=>{
    window.addEventListener("resiz",handelaerSize)
+   return windosize.removeEventListener("resiz",handelaerSize)
 })
 //   useEffect(() => {
 //     fetch(`https://jsonplaceholder.typicode.com/${resoursetype}`)
