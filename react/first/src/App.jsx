@@ -7,6 +7,8 @@ import Product from "./components/Product";
 import Counter from "./components/Counter";
 import Todo from "./components/Todo";
 import Navbar from "./components/Navbar";
+import Tailwind1 from "./components/Tailwind1";
+import Useeffect from "./components/Useeffect";
 
 function App() {
   const prodact={
@@ -51,7 +53,9 @@ descountPercentage={prodact.descountPercentage}
 /> */}
 {/* <Counter/> */}
 {/* <Todo/> */}
-<Navbar/>
+{/* <Navbar/> */}
+{/* <Tailwind1/> */}
+<Useeffect/>
     </div>
   );
 }
