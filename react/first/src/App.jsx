@@ -9,6 +9,7 @@ import Todo from "./components/Todo";
 import Navbar from "./components/Navbar";
 import Tailwind1 from "./components/Tailwind1";
 import Useeffect from "./components/Useeffect";
+import Api from "./components/Api";
 
 function App() {
   const prodact={
@@ -55,7 +56,8 @@ descountPercentage={prodact.descountPercentage}
 {/* <Todo/> */}
 {/* <Navbar/> */}
 {/* <Tailwind1/> */}
-<Useeffect/>
+{/* <Useeffect/> */}
+<Api/>
     </div>
   );
 }
