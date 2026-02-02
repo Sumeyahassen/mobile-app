@@ -28,27 +28,18 @@ function Header() {
             </a>
           );
         })}
-        <FaSearch className="text-gray-500" size={20} />
-        <IoBag className="text-gray-500" size={20} />
+        <FaSearch className="text-gray-500" />
+        <IoBag className="text-gray-500" />
       </div>
       {/* mobile view */}
-
-      <div className="flex justify-between items-center py-3 px-5 ">
-        <FaApple />
-        {isOpen &&
-          headers.map((link, index) => {
-            <a className="flex flex-col h-auto w-full" key={index}>
-              {link}
-            </a>;
-          })}
-        <div className="flex justify-center gap-5">
-          <FaSearch />
-          <IoBag />
-         <button
-         onClick={()=>setOpen(!isOpen)}
-         >
-            {isOpen?<IoIosClose/>:<ImMenu/>}
-         </button>
+      <div className="flex justify-between lg:hidden px-10">
+        <FaApple className="text-gray-800" />
+        <div className="flex gap-5">
+          <FaSearch className="text-gray-500" />
+          <IoBag className="text-gray-500" />
+          <button onClick={() => setOpen} className=" lg:hidden">
+            <ImMenu />
+          </button>
         </div>
       </div>
     </div>
