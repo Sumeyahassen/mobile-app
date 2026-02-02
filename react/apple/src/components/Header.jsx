@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaSearch, FaApple } from "react-icons/fa";
 import { IoBag } from "react-icons/io5";
 import { ImMenu } from "react-icons/im";
+import { IoIosClose } from "react-icons/io";
 function Header() {
   const headers = [
     "store",
@@ -27,17 +28,17 @@ function Header() {
             </a>
           );
         })}
-        <FaSearch className="text-gray-500" />
-        <IoBag className="text-gray-500" />
+        <FaSearch className="text-gray-500" size={20}/>
+        <IoBag className="text-gray-500" size={20}/>
       </div>
       {/* mobile view */}
-      <div className="flex justify-between lg:hidden px-10">
+      <div className="flex justify-between items-center py-3 lg:hidden px-10">
         <FaApple className="text-gray-800" />
-        <div className="flex gap-5">
+        <div className="flex gap-5 justify-center items-center">
           <FaSearch className="text-gray-500" />
           <IoBag className="text-gray-500" />
-          <button onClick={() => setOpen} className=" lg:hidden">
-            <ImMenu />
+          <button onClick={() => setOpen(!isOpen)} className=" lg:hidden">
+            {isOpen?<IoIosClose size={30}/> :<ImMenu size={20}/>}
           </button>
         </div>
       </div>
