@@ -1,10 +1,11 @@
 import React from 'react'
+import Home from './pages/Home'
 
 function App() {
   return (
-    <div className='text-black h-screen bg-green-500'>
-      apple web site
-    </div>
+ <div className="font-serif">
+  <Home/>
+ </div>
   )
 }
 
