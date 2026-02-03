@@ -51,7 +51,7 @@ function Header() {
 
      </div>
       </div>
-      <div className="flex flex-col bg-amber-300 h-screen py-6 items-center gap-3.5 justify-end">
+      <div className="flex flex-col bg-amber-300 h-screen py-6 items-end gap-3.5 justify-end">
         <div className="">home</div>
         <div className="">about</div>
         <div className="">servise</div>
