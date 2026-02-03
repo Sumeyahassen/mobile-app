@@ -32,15 +32,31 @@ function Header() {
         <IoBag className="text-gray-500" />
       </div>
       {/* mobile view */}
-      <div className="flex justify-between lg:hidden px-10">
+      <div className="flex justify-between items-center lg:hidden px-10 py-3">
         <FaApple className="text-gray-800" />
         <div className="flex gap-5">
           <FaSearch className="text-gray-500" />
           <IoBag className="text-gray-500" />
-          <button onClick={() => setOpen} className=" lg:hidden">
-            <ImMenu />
+          <button onClick={() => setOpen(!isOpen)} className=" lg:hidden">
+            {isOpen?<IoIosClose/>:<ImMenu/>}
           </button>
         </div>
+     <div className="bg-green-300 lg:hidden">
+           {isOpen&&(
+            headers.map((link,index)=>{
+                <a key={index}>link</a>
+            })
+
+        )}
+
+     </div>
+      </div>
+      <div className="flex flex-col bg-amber-300 py-6 items-center gap-3.5 ">
+        <div className="">home</div>
+        <div className="">about</div>
+        <div className="">servise</div>
+        <div className="">contact</div>
+        <div className="">project</div>
       </div>
     </div>
   );
