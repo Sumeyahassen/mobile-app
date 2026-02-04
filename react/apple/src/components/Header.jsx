@@ -22,13 +22,13 @@ function Header() {
       {/* for desktope */}
       <div className="hidden lg:flex justify-center gap-10 items-center py-5 px-5 bg-gray-50">
         <FaApple />
-        <div className="flex justify-center items-center gap-5 ">
+        <div className="flex justify-center items-center gap-5 capitalize ">
           {headers.map((link, index) => {
             return (
               <a
               href={`# ${link}`}
               className="cursor-pointer text-lg " key={index}>
-                {link.toUpperCase()}
+                {link}
               </a>
             );
           })}
@@ -56,7 +56,7 @@ function Header() {
         {/* mobile sidebare */}
 {/* Mobile menu - shows only when isOpen is true */}
         {isOpen && (
-          <div className="bg-green-500 px-6 py-4 flex flex-col gap-5 text-lg border-t border-gray-950 justify-center items-center">
+          <div className="bg-green-500 px-6 py-4 flex flex-col gap-5 text-lg border-t border-gray-950 justify-center items-center capitalize">
             {headers.map((link, index) => (
               <a
                 href="#"
@@ -64,7 +64,7 @@ function Header() {
                 className="hover:text-gray-300 py-2"
                 onClick={() => setOpen(false)} // close menu when link clicked
               >
-                {link.toUpperCase()}
+                {link}
               </a>
             ))}
           </div>
