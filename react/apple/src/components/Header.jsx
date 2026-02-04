@@ -18,45 +18,45 @@ function Header() {
   ];
   const [isOpen, setOpen] = useState(false);
   return (
-    <div>
-      <div className="hidden lg:flex justify-center items-center gap-10 py-3 bg-gray-50 text-gray-950">
-        <FaApple className="text-gray-800" />
-        {headers.map((link, index) => {
-          return (
-            <a href="#" key={index}>
-              {link}
-            </a>
-          );
-        })}
-        <FaSearch className="text-gray-500" />
-        <IoBag className="text-gray-500" />
-      </div>
-      {/* mobile view */}
-      <div className="flex justify-between items-center lg:hidden px-10 py-3">
-        <FaApple className="text-gray-800" />
-        <div className="flex gap-5">
-          <FaSearch className="text-gray-500" />
-          <IoBag className="text-gray-500" />
-          <button onClick={() => setOpen(!isOpen)} className=" lg:hidden">
-            {isOpen?<IoIosClose/>:<ImMenu/>}
-          </button>
+    <div className="">
+      {/* for desktope */}
+      <div className="hidden lg:flex justify-center gap-10 items-center py-5 px-5 bg-gray-50">
+        <FaApple />
+        <div className="flex justify-center items-center gap-5 ">
+          {headers.map((link, index) => {
+            return (
+              <a
+              href="#"
+              className="cursor-pointer text-lg " key={index}>
+                {link}
+              </a>
+            );
+          })}
         </div>
-     <div className="bg-green-300 lg:hidden">
-           {isOpen&&(
-            headers.map((link,index)=>{
-                <a key={index}>link</a>
-            })
-
-        )}
-
-     </div>
+        <div className="flex justify-center items-center gap-10">
+          <FaSearch />
+          <IoBag />
+        </div>
       </div>
-      <div className="flex flex-col bg-amber-300 h-screen py-6 items-end gap-3.5 justify-end">
-        <div className="">home</div>
-        <div className="">about</div>
-        <div className="">servise</div>
-        <div className="">contact</div>
-        <div className="">project</div>
+      <div className="">
+        {/* for mobile and desctope */}
+        <div className="flex justify-between py-5 px-10 lg:hidden">
+          <FaApple/>
+          <div className="flex flex-col ">
+            {headers.map((link,index)=>{
+              return(
+                <a key={index}>
+                  {link}
+                </a>
+              )
+            })}
+          </div>
+          <div className="flex gap-10">
+            <FaSearch/>
+            <IoBag/>
+            <ImMenu/>
+          </div>
+        </div>
       </div>
     </div>
   );
