@@ -42,15 +42,15 @@ function Header() {
         {/* for mobile and desctope */}
         <div className="flex justify-between py-5 px-10 lg:hidden">
           <FaApple/>
-          <div className="flex flex-col ">
+          {/* <div className="flex flex-col ">
             {headers.map((link,index)=>{
-              return(
+              isOpen&&(
                 <a key={index}>
                   {link}
                 </a>
               )
             })}
-          </div>
+          </div> */}
           <div className="flex gap-10">
             <FaSearch/>
             <IoBag/>
@@ -61,6 +61,22 @@ function Header() {
             </button>
           </div>
         </div>
+        {/* mobile sidebare */}
+{/* Mobile menu - shows only when isOpen is true */}
+        {isOpen && (
+          <div className="bg-green-500 px-6 py-4 flex flex-col gap-5 text-lg border-t border-gray-950 justify-center items-center">
+            {headers.map((link, index) => (
+              <a
+                href="#"
+                key={index}
+                className="hover:text-gray-300 py-2"
+                onClick={() => setOpen(false)} // close menu when link clicked
+              >
+                {link.toUpperCase()}
+              </a>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
