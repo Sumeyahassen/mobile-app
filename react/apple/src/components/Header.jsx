@@ -54,7 +54,11 @@ function Header() {
           <div className="flex gap-10">
             <FaSearch/>
             <IoBag/>
-            <ImMenu/>
+            <button
+            className="flex "
+              onClick={()=>setOpen(!isOpen)}>
+              {isOpen?<IoIosClose/>:<ImMenu/>}
+            </button>
           </div>
         </div>
       </div>
