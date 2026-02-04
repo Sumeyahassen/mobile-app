@@ -26,9 +26,9 @@ function Header() {
           {headers.map((link, index) => {
             return (
               <a
-              href="#"
+              href={`# ${link}`}
               className="cursor-pointer text-lg " key={index}>
-                {link}
+                {link.toUpperCase()}
               </a>
             );
           })}
@@ -42,15 +42,7 @@ function Header() {
         {/* for mobile and desctope */}
         <div className="flex justify-between py-5 px-10 lg:hidden">
           <FaApple/>
-          {/* <div className="flex flex-col ">
-            {headers.map((link,index)=>{
-              isOpen&&(
-                <a key={index}>
-                  {link}
-                </a>
-              )
-            })}
-          </div> */}
+
           <div className="flex gap-10">
             <FaSearch/>
             <IoBag/>
