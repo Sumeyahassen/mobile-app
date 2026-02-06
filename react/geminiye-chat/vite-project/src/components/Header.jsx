@@ -18,7 +18,7 @@ const Header = () => {
     </div>
     {/* for right side */}
     <div className="">
-    <div className="h-20 w-20 bg-gray-500 rounded-full placeholder:S"></div>
+    <div className="hidden h-20 w-20 bg-gray-500 rounded-full placeholder:S"></div>
     </div>
    </header>
   );
