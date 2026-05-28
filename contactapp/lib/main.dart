@@ -1,4 +1,5 @@
 import 'package:contactapp/counter.dart';
+import 'package:contactapp/profile.dart';
 import 'package:flutter/material.dart';
 void main(){
   runApp(Main());
@@ -10,7 +11,8 @@ const Main({ Key? key }) : super(key: key);
   @override
   Widget build(BuildContext context){
     return MaterialApp(
-      home: Counter(),
+      // home: Counter(),
+      home: Profile(),
     );
   }
 }
